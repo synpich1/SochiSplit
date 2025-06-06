@@ -161,6 +161,649 @@
             height: 6px;
         }
     }
+
+    /* Стили для фильтра */
+    .filter-container {
+        background-color: #fff;
+        border-radius: 16px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+        margin-bottom: 35px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        border: 1px solid rgba(0, 0, 0, 0.03);
+    }
+
+    .filter-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 24px;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+        background: linear-gradient(to right, rgba(0, 153, 255, 0.03), rgba(0, 153, 255, 0.01));
+    }
+
+    .filter-header h3 {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 0;
+        color: #222;
+        position: relative;
+        padding-left: 12px;
+    }
+    
+    .filter-header h3:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 4px;
+        height: 20px;
+        background: var(--accent-color, #0099ff);
+        border-radius: 4px;
+    }
+
+    .filter-toggle-btn {
+        background: none;
+        border: none;
+        color: #555;
+        cursor: pointer;
+        font-size: 18px;
+        transition: all 0.3s ease;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .filter-toggle-btn:hover {
+        color: var(--accent-color, #0099ff);
+        background-color: rgba(0, 153, 255, 0.08);
+        transform: scale(1.05);
+    }
+
+    .filter-body {
+        padding: 24px;
+    }
+
+    .filter-group {
+        margin-bottom: 28px;
+        position: relative;
+        padding-bottom: 5px;
+    }
+    
+    .filter-group:last-child {
+        margin-bottom: 10px;
+    }
+
+    .filter-group h4 {
+        font-size: 16px;
+        font-weight: 600;
+        margin: 0 0 16px 0;
+        color: #333;
+        display: flex;
+        align-items: center;
+    }
+    
+    .filter-group h4 i {
+        margin-right: 8px;
+        color: var(--accent-color, #0099ff);
+        opacity: 0.8;
+    }
+
+    /* Стили для ползунков */
+    .range-slider {
+        position: relative;
+        height: 6px;
+        background: linear-gradient(to right, #e0e0e0, #f0f0f0);
+        border-radius: 8px;
+        margin: 25px 10px 30px 10px;
+        box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    
+    .range-slider:before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, var(--accent-color, #0099ff), #5dc2ff);
+        border-radius: 8px;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .range-slider:hover:before {
+        opacity: 0.15;
+    }
+
+    .range-slider .range {
+        position: absolute;
+        width: 100%;
+        height: 6px;
+        background: none;
+        top: -8px;
+        pointer-events: none;
+        -webkit-appearance: none;
+        z-index: 10;
+    }
+
+    .range-slider .range::-webkit-slider-thumb {
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+        pointer-events: auto;
+        -webkit-appearance: none;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        border: 2px solid var(--accent-color, #0099ff);
+        transition: all 0.2s ease;
+    }
+    
+    .range-slider .range::-webkit-slider-thumb:hover {
+        transform: scale(1.1);
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .range-slider .range::-moz-range-thumb {
+        height: 22px;
+        width: 22px;
+        border-radius: 50%;
+        background: #fff;
+        cursor: pointer;
+        pointer-events: auto;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+        border: 2px solid var(--accent-color, #0099ff);
+        transition: all 0.2s ease;
+    }
+    
+    .range-slider .range::-moz-range-thumb:hover {
+        transform: scale(1.1);
+    }
+    
+    .price-inputs, .area-inputs {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 15px;
+    }
+    
+    .price-inputs input, .area-inputs input {
+        width: calc(50% - 10px);
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 10px 12px;
+        font-size: 14px;
+        transition: all 0.3s ease;
+        background-color: #f9f9f9;
+        color: #333;
+    }
+    
+    .price-inputs input:focus, .area-inputs input:focus {
+        border-color: var(--accent-color, #0099ff);
+        box-shadow: 0 0 0 3px rgba(0, 153, 255, 0.1);
+        background-color: #fff;
+        outline: none;
+    }
+    
+    .price-inputs span, .area-inputs span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #777;
+        font-size: 14px;
+    }
+    
+    /* Стили для чекбоксов производителей */
+    .manufacturers-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 12px;
+        margin-top: 5px;
+    }
+    
+    .manufacturer-item {
+        position: relative;
+    }
+    
+    .manufacturer-checkbox {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+    }
+    
+    .manufacturer-label {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px;
+        background-color: #f5f5f5;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        font-size: 14px;
+        border: 1px solid transparent;
+    }
+    
+    .manufacturer-checkbox:checked + .manufacturer-label {
+        background-color: rgba(0, 153, 255, 0.1);
+        border-color: rgba(0, 153, 255, 0.3);
+        color: var(--accent-color, #0099ff);
+        font-weight: 500;
+    }
+    
+    .manufacturer-label:hover {
+        background-color: #f0f0f0;
+        transform: translateY(-2px);
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.05);
+    }
+    
+    .manufacturer-checkbox:checked + .manufacturer-label:hover {
+        background-color: rgba(0, 153, 255, 0.15);
+    }
+    
+    .manufacturer-label::before {
+        content: '';
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        transition: all 0.2s ease;
+    }
+    
+    .manufacturer-checkbox:checked + .manufacturer-label::before {
+        background-color: var(--accent-color, #0099ff);
+        border-color: var(--accent-color, #0099ff);
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='16' height='16'%3E%3Cpath fill='none' stroke='%23fff' stroke-width='3' d='M5 12l5 5 9-9'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    
+    /* Стили для сортировки */
+    .sort-container {
+        display: flex;
+        align-items: center;
+        margin: 0 0 15px;
+        padding: 12px 16px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+    }
+    
+    .sort-label {
+        font-size: 15px;
+        font-weight: 500;
+        margin-right: 12px;
+        color: #555;
+    }
+    
+    .sort-options {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .sort-option {
+        padding: 6px 12px;
+        border-radius: 6px;
+        background-color: #fff;
+        border: 1px solid #e0e0e0;
+        cursor: pointer;
+        font-size: 14px;
+        transition: all 0.2s ease;
+        color: #666;
+    }
+    
+    .sort-option:hover {
+        border-color: #ccc;
+        background-color: #f5f5f5;
+    }
+    
+    .sort-option.active {
+        background-color: var(--accent-color, #0099ff);
+        color: #fff;
+        border-color: var(--accent-color, #0099ff);
+    }
+    
+    /* Стили для кнопок фильтра */
+    .filter-buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        padding-top: 20px;
+        border-top: 1px solid #f0f0f0;
+    }
+    
+    .filter-button {
+        padding: 10px 18px;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .filter-button i {
+        margin-right: 8px;
+    }
+    
+    .apply-filter {
+        background-color: var(--accent-color, #0099ff);
+        color: #fff;
+        border: none;
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+    
+    .apply-filter:hover {
+        background-color: #008ae6;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 153, 255, 0.2);
+    }
+    
+    .reset-filter {
+        background-color: transparent;
+        border: 1px solid #e0e0e0;
+        color: #666;
+    }
+    
+    .reset-filter:hover {
+        background-color: #f5f5f5;
+        border-color: #ccc;
+    }
+    
+    .filter-results-count {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 15px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .filter-results-count strong {
+        color: #333;
+        margin: 0 4px;
+    }
+    
+    /* Адаптивный дизайн для фильтра */
+    @media (max-width: 768px) {
+        .filter-container {
+            border-radius: 14px;
+            margin-bottom: 25px;
+        }
+        
+        .filter-header {
+            padding: 15px 20px;
+        }
+        
+        .filter-body {
+            padding: 18px;
+        }
+        
+        .manufacturers-list {
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        
+        .filter-body.collapsed {
+            display: none;
+        }
+        
+        .filter-toggle-btn {
+            width: 36px;
+            height: 36px;
+        }
+        
+        .sort-container {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        
+        .sort-label {
+            margin-bottom: 8px;
+        }
+        
+        .sort-options {
+            width: 100%;
+        }
+        
+        .sort-option {
+            flex-grow: 1;
+            text-align: center;
+        }
+        
+        .price-inputs, .area-inputs {
+            flex-wrap: wrap;
+        }
+        
+        .price-inputs input, .area-inputs input {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        
+        .filter-button {
+            padding: 10px 15px;
+            font-size: 14px;
+        }
+    }
+    
+    /* Анимации для фильтра */
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(0, 153, 255, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 8px rgba(0, 153, 255, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(0, 153, 255, 0);
+        }
+    }
+    
+    .apply-filter:focus {
+        animation: pulse 1.5s infinite;
+    }
+    
+    .product-card.filtered-out {
+        opacity: 0;
+        transform: scale(0.95);
+        pointer-events: none;
+        transition: all 0.4s ease;
+    }
+    
+    .product-card.filtered-in {
+        opacity: 1;
+        transform: scale(1);
+        transition: all 0.4s ease;
+    }
+
+    /* Дополнительные стили */
+    .filter-sort {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        align-items: center;
+        background-color: #f9f9f9;
+        padding: 12px 15px;
+        border-radius: 8px;
+    }
+    
+    .filter-results {
+        font-size: 14px;
+        color: #666;
+        font-weight: 500;
+    }
+    
+    .sort-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .sort-container label {
+        font-size: 14px;
+        color: #666;
+    }
+    
+    .sort-select {
+        padding: 8px 10px;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        font-size: 14px;
+        color: #333;
+        background-color: #fff;
+        cursor: pointer;
+        transition: border-color 0.3s ease;
+    }
+    
+    .sort-select:hover, .sort-select:focus {
+        border-color: var(--accent-color, #0099ff);
+        outline: none;
+    }
+    
+    .no-results {
+        grid-column: 1 / -1;
+        text-align: center;
+        padding: 40px 30px;
+        background-color: #f9f9f9;
+        border-radius: 12px;
+        color: #666;
+        font-size: 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        margin: 20px 0;
+        border: 1px dashed #ddd;
+    }
+    
+    /* Стили для мобильной версии */
+    @media (max-width: 768px) {
+        .filter-body {
+            padding: 15px;
+        }
+        
+        .filter-actions {
+            position: sticky;
+            bottom: 0;
+            background-color: #fff;
+            padding: 15px;
+            margin: 0 -15px -15px;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.05);
+            z-index: 10;
+        }
+        
+        .filter-toggle-btn {
+            display: block;
+        }
+        
+        .filter-body.collapsed {
+            display: none;
+        }
+        
+        .filter-sort {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .sort-container {
+            width: 100%;
+        }
+        
+        .sort-select {
+            flex-grow: 1;
+        }
+    }
+
+    /* Анимация для карточек товаров при фильтрации */
+    .product-card {
+        transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    .product-card.filtered-out {
+        opacity: 0;
+        transform: scale(0.95);
+        pointer-events: none;
+    }
+
+    /* Стили для трека ползунков */
+    .slider-track {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        z-index: 1;
+        pointer-events: none;
+    }
+    
+    /* Метки диапазонов */
+    .range-slider::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 12px;
+        height: 2px;
+        background: repeating-linear-gradient(to right, 
+            rgba(0, 0, 0, 0.03) 0px, 
+            rgba(0, 0, 0, 0.03) 1px, 
+            transparent 1px, 
+            transparent 10%
+        );
+    }
+    
+    /* Стиль для скрытия карточек товаров */
+    .product-card.hidden-card {
+        display: none !important;
+    }
+    
+    /* Стиль для отображения карточек товаров */
+    .product-card.visible-card {
+        display: block !important;
+        animation: fadeIn 0.3s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        from { opacity: 0.5; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+    
+    /* Стили для контейнера цены */
+    .product-card__price-container {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        margin-top: 8px;
+    }
+    
+    /* Стиль для старой цены */
+    .product-card__old-price {
+        color: #999;
+        text-decoration: line-through;
+        font-size: 16px;
+    }
+    
+    /* Обновленный стиль для текущей цены */
+    .product-card__price {
+        color: var(--accent-color);
+        font-weight: 700;
+        font-size: 20px;
+    }
+    
+    /* Стиль для скидочной цены (только для товара со скидкой) */
+    .product-card__price-container .product-card__price {
+        color: #ff4757;
+    }
 </style>
 </head>
 <body>
@@ -213,6 +856,98 @@
         <h2 class="section-title">Каталог <span class="accent">кондиционеров</span></h2>
         <div class="section-line"></div>
     </div>
+
+    <!-- Фильтр кондиционеров -->
+    <div class="filter-container">
+        <div class="filter-header">
+            <h3>Фильтры</h3>
+            <button class="filter-toggle-btn" aria-label="Показать/скрыть фильтры">
+                <i class="fas fa-sliders-h"></i>
+            </button>
+        </div>
+        
+        <div class="filter-body">
+            <!-- Статистика результатов -->
+            <div class="filter-results-count">
+                Найдено <strong id="products-count">12</strong> товаров
+            </div>
+            
+            <!-- Сортировка -->
+            <div class="sort-container">
+                <div class="sort-label">Сортировать по:</div>
+                <div class="sort-options">
+                    <div class="sort-option active" data-sort="popularity">Популярности</div>
+                    <div class="sort-option" data-sort="price-asc">Сначала дешевле</div>
+                    <div class="sort-option" data-sort="price-desc">Сначала дороже</div>
+                    <div class="sort-option" data-sort="area-asc">По площади ↑</div>
+                </div>
+            </div>
+            
+            <!-- Фильтр по цене -->
+            <div class="filter-group">
+                <h4><i class="fas fa-ruble-sign"></i> Цена, ₽</h4>
+                <div class="price-slider">
+                    <div class="range-slider">
+                        <input type="range" min="15000" max="90000" value="15000" class="range" id="price-min">
+                        <input type="range" min="15000" max="90000" value="90000" class="range" id="price-max">
+                        <div class="slider-track" id="price-track"></div>
+                    </div>
+                    <div class="price-inputs">
+                        <input type="number" min="15000" max="90000" value="15000" id="price-min-input">
+                        <span>—</span>
+                        <input type="number" min="15000" max="90000" value="90000" id="price-max-input">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Фильтр по площади -->
+            <div class="filter-group">
+                <h4><i class="fas fa-vector-square"></i> Площадь помещения, м²</h4>
+                <div class="area-slider">
+                    <div class="range-slider">
+                        <input type="range" min="9" max="100" value="9" class="range" id="area-min">
+                        <input type="range" min="9" max="100" value="100" class="range" id="area-max">
+                        <div class="slider-track" id="area-track"></div>
+                    </div>
+                    <div class="area-inputs">
+                        <input type="number" min="9" max="100" value="9" id="area-min-input">
+                        <span>—</span>
+                        <input type="number" min="9" max="100" value="100" id="area-max-input">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Фильтр по производителю -->
+            <div class="filter-group">
+                <h4><i class="fas fa-industry"></i> Производитель</h4>
+                <div class="manufacturers-list">
+                    <div class="manufacturer-item">
+                        <input type="checkbox" id="brand-icongo" class="manufacturer-checkbox" value="iCongo" checked>
+                        <label for="brand-icongo" class="manufacturer-label">iCongo</label>
+                    </div>
+                    <div class="manufacturer-item">
+                        <input type="checkbox" id="brand-axioma" class="manufacturer-checkbox" value="Axioma">
+                        <label for="brand-axioma" class="manufacturer-label">Axioma</label>
+                    </div>
+                    <div class="manufacturer-item">
+                        <input type="checkbox" id="brand-morozko" class="manufacturer-checkbox" value="Морозко">
+                        <label for="brand-morozko" class="manufacturer-label">Морозко</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Кнопки управления фильтром -->
+            <div class="filter-buttons">
+                <button id="apply-filter" class="filter-button apply-filter">
+                    <i class="fas fa-filter"></i> Применить
+                </button>
+                <button id="reset-filter" class="filter-button reset-filter">
+                    <i class="fas fa-undo"></i> Сбросить
+                </button>
+            </div>
+        </div>
+    </div>
+    
     <div class="products-grid">
         <!-- Карточка товара 1 -->
         <div class="product-card">
@@ -288,7 +1023,7 @@
                 </div>
             </div>
             <div class="product-card__content">
-                <h3 class="product-card__title">iCongo CS-09H3A-T159AM2</h3>
+                <h3 class="product-card__title">iCongo CS-25H3A-B170AMI</h3>
                 <div class="product-card__features">
                     <div class="feature">
                         <span class="feature__name">Мощность охлаждения:</span>
@@ -299,48 +1034,22 @@
                         <span class="feature__value">до 9 м²</span>
                     </div>
                     <div class="feature">
-                        <span class="feature__name">WiFi:</span>
-                        <span class="feature__value">встроенный</span>
+                        <span class="feature__name">Потребляемая мощность при охлаждении:</span>
+                        <span class="feature__value"> 1557 Вт.</span>
                     </div>
                 </div>
-                <div class="product-card__price">9 300 ₽</div>
+                <div class="product-card__price">19 200 ₽</div>
             </div>
         </div>
         
-        <!-- Карточка товара 3 -->
-        <div class="product-card">
-            <div class="product-card__image">
-                <img src="img/iCongo/icongo_cs_24h3a_tl36am4.jpg" alt="iCongo CS-24H3A-TL36AM4 - основной вид">
-                <div class="product-card__badge">Новинка</div>
-            </div>
-            <div class="product-card__content">
-                <h3 class="product-card__title">iCongo CS-24H3A-TL36AM4</h3>
-                <div class="product-card__features">
-                    <div class="feature">
-                        <span class="feature__name">Мощность охлаждения:</span>
-                        <span class="feature__value">2.4 кВт</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature__name">Площадь помещения:</span>
-                        <span class="feature__value">до 24 м²</span>
-                    </div>
-                    <div class="feature">
-                        <span class="feature__name">Инверторный:</span>
-                        <span class="feature__value">да</span>
-                    </div>
-                </div>
-                <div class="product-card__price">21 900 ₽</div>
-            </div>
-        </div>
-        
-        <!-- Карточка товара 4 -->
+       <!-- Карточка товара 4 -->
         <div class="product-card">
             <div class="product-card__image">
                 <img src="img/iCongo/icongo_cs_18h3a_vl45ae2.jpg" alt="iCongo CS-18H3A-VL45AE2 - основной вид">
                 <div class="product-card__badge">Скидка</div>
             </div>
             <div class="product-card__content">
-                <h3 class="product-card__title">iCongo CS-18H3A-VL45AE2</h3>
+                <h3 class="product-card__title">iCongo CS-35H3A-1C170AY8E</h3>
                 <div class="product-card__features">
                     <div class="feature">
                         <span class="feature__name">Мощность охлаждения:</span>
@@ -348,14 +1057,17 @@
                     </div>
                     <div class="feature">
                         <span class="feature__name">Площадь помещения:</span>
-                        <span class="feature__value">до 18 м²</span>
+                        <span class="feature__value">до 55 м²</span>
                     </div>
                     <div class="feature">
-                        <span class="feature__name">Очистка воздуха:</span>
-                        <span class="feature__value">ионизатор</span>
+                        <span class="feature__name">Электропитание:</span>
+                        <span class="feature__value">220–240 В, 50 Гц</span>
                     </div>
                 </div>
-                <div class="product-card__price">16 800 ₽</div>
+                <div class="product-card__price-container">
+                    <div class="product-card__old-price">35 550 ₽</div>
+                    <div class="product-card__price">27 200 ₽</div>
+                </div>
             </div>
         </div>
         
@@ -433,7 +1145,7 @@
                 </div>
             </div>
             <div class="product-card__content">
-                <h3 class="product-card__title">iCongo CS-07H3A-WB147AM3</h3>
+                <h3 class="product-card__title">iCongo CS-72H3A-1D170AE5</h3>
                 <div class="product-card__features">
                     <div class="feature">
                         <span class="feature__name">Мощность охлаждения:</span>
@@ -441,14 +1153,14 @@
                     </div>
                     <div class="feature">
                         <span class="feature__name">Площадь помещения:</span>
-                        <span class="feature__value">до 7 м²</span>
+                        <span class="feature__value">до 70 м²</span>
                     </div>
                     <div class="feature">
                         <span class="feature__name">Класс энергоэффективности:</span>
-                        <span class="feature__value">A++</span>
+                        <span class="feature__value">A</span>
                     </div>
                 </div>
-                <div class="product-card__price">8 200 ₽</div>
+                <div class="product-card__price">58 400  ₽</div>
             </div>
         </div>
         
@@ -467,7 +1179,7 @@
                     </div>
                     <div class="feature">
                         <span class="feature__name">Площадь помещения:</span>
-                        <span class="feature__value">до 88 м²</span>
+                        <span class="feature__value">71–100 м²</span>
                     </div>
                     <div class="feature">
                         <span class="feature__name">Мощность обогрева:</span>
@@ -485,7 +1197,7 @@
                 <div class="product-card__badge">Для больших помещений</div>
             </div>
             <div class="product-card__content">
-                <h3 class="product-card__title">iCongo CT3S-100H3A-AT3A</h3>
+                <h3 class="product-card__title">iCongo CT3S-100H3A-1E170 AT3A</h3>
                 <div class="product-card__features">
                     <div class="feature">
                         <span class="feature__name">Мощность охлаждения:</span>
@@ -885,14 +1597,14 @@
             </div>
         </div>
         
-        <!-- Карточка товара 19 - Axioma ASX18FZ1/ASB18FZ1 (инвертор) -->
+        <!-- Карточка товара 19 - Axioma ASX18FZ1/ASB18F21 (инвертор) -->
         <div class="product-card">
             <div class="product-card__image">
                 <img src="img/Axioma/axioma_asx18fz1_asb18fz1_inverter.jpg" alt="Axioma ASX18FZ1/ASB18FZ1">
                 <div class="product-card__badge">Инверторный</div>
             </div>
             <div class="product-card__content">
-                <h3 class="product-card__title">Axioma ASX18FZ1/ASB18FZ1</h3>
+                <h3 class="product-card__title">Axioma ASX18FZ1/ASB18F21</h3>
                 <div class="product-card__features">
                     <div class="feature">
                         <span class="feature__name">Мощность охлаждения:</span>
@@ -1424,6 +2136,463 @@ function initSlider(slider) {
     // Инициализация первого слайда
     showSlide(0);
 }
+</script>
+
+<!-- Скрипт для фильтра кондиционеров -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('Инициализация фильтра кондиционеров...');
+    
+    // Получение элементов фильтра
+    const priceMinSlider = document.getElementById('price-min');
+    const priceMaxSlider = document.getElementById('price-max');
+    const priceMinInput = document.getElementById('price-min-input');
+    const priceMaxInput = document.getElementById('price-max-input');
+    
+    const areaMinSlider = document.getElementById('area-min');
+    const areaMaxSlider = document.getElementById('area-max');
+    const areaMinInput = document.getElementById('area-min-input');
+    const areaMaxInput = document.getElementById('area-max-input');
+    
+    const applyFilterBtn = document.getElementById('apply-filter');
+    const resetFilterBtn = document.getElementById('reset-filter');
+    const sortOptions = document.querySelectorAll('.sort-option');
+    const manufacturerCheckboxes = document.querySelectorAll('.manufacturer-checkbox');
+    const productsCountElement = document.getElementById('products-count');
+    
+    console.log('Элементы фильтра найдены:', {
+        priceSliders: !!priceMinSlider && !!priceMaxSlider,
+        areaSliders: !!areaMinSlider && !!areaMaxSlider,
+        applyBtn: !!applyFilterBtn,
+        resetBtn: !!resetFilterBtn,
+        sortOptions: sortOptions.length,
+        manufacturerCheckboxes: manufacturerCheckboxes.length
+    });
+    
+    // Вывод состояния чекбоксов производителей для отладки
+    manufacturerCheckboxes.forEach(checkbox => {
+        console.log(`Производитель ${checkbox.value}: ${checkbox.checked ? 'выбран' : 'не выбран'}`);
+    });
+    
+    // Обработка ползунков цены
+    if (priceMinSlider && priceMaxSlider && priceMinInput && priceMaxInput) {
+        priceMinSlider.addEventListener('input', function() {
+            if (parseInt(priceMinSlider.value) > parseInt(priceMaxSlider.value)) {
+                priceMinSlider.value = priceMaxSlider.value;
+            }
+            priceMinInput.value = priceMinSlider.value;
+        });
+        
+        priceMaxSlider.addEventListener('input', function() {
+            if (parseInt(priceMaxSlider.value) < parseInt(priceMinSlider.value)) {
+                priceMaxSlider.value = priceMinSlider.value;
+            }
+            priceMaxInput.value = priceMaxSlider.value;
+        });
+        
+        priceMinInput.addEventListener('input', function() {
+            if (parseInt(priceMinInput.value) < parseInt(priceMinSlider.min)) {
+                priceMinInput.value = priceMinSlider.min;
+            }
+            if (parseInt(priceMinInput.value) > parseInt(priceMaxInput.value)) {
+                priceMinInput.value = priceMaxInput.value;
+            }
+            priceMinSlider.value = priceMinInput.value;
+        });
+        
+        priceMaxInput.addEventListener('input', function() {
+            if (parseInt(priceMaxInput.value) > parseInt(priceMaxSlider.max)) {
+                priceMaxInput.value = priceMaxSlider.max;
+            }
+            if (parseInt(priceMaxInput.value) < parseInt(priceMinInput.value)) {
+                priceMaxInput.value = priceMinInput.value;
+            }
+            priceMaxSlider.value = priceMaxInput.value;
+        });
+    }
+    
+    // Обработка ползунков площади
+    if (areaMinSlider && areaMaxSlider && areaMinInput && areaMaxInput) {
+        areaMinSlider.addEventListener('input', function() {
+            if (parseInt(areaMinSlider.value) > parseInt(areaMaxSlider.value)) {
+                areaMinSlider.value = areaMaxSlider.value;
+            }
+            areaMinInput.value = areaMinSlider.value;
+        });
+        
+        areaMaxSlider.addEventListener('input', function() {
+            if (parseInt(areaMaxSlider.value) < parseInt(areaMinSlider.value)) {
+                areaMaxSlider.value = areaMinSlider.value;
+            }
+            areaMaxInput.value = areaMaxSlider.value;
+        });
+        
+        areaMinInput.addEventListener('input', function() {
+            if (parseInt(areaMinInput.value) < parseInt(areaMinSlider.min)) {
+                areaMinInput.value = areaMinSlider.min;
+            }
+            if (parseInt(areaMinInput.value) > parseInt(areaMaxInput.value)) {
+                areaMinInput.value = areaMaxInput.value;
+            }
+            areaMinSlider.value = areaMinInput.value;
+        });
+        
+        areaMaxInput.addEventListener('input', function() {
+            if (parseInt(areaMaxInput.value) > parseInt(areaMaxSlider.max)) {
+                areaMaxInput.value = areaMaxSlider.max;
+            }
+            if (parseInt(areaMaxInput.value) < parseInt(areaMinInput.value)) {
+                areaMaxInput.value = areaMinInput.value;
+            }
+            areaMaxSlider.value = areaMaxInput.value;
+        });
+    }
+    
+    // Обработчик кнопки "Применить"
+    if (applyFilterBtn) {
+        applyFilterBtn.addEventListener('click', function() {
+            console.log('Применяем фильтр...');
+            applyFilters();
+        });
+    }
+    
+    // Обработчик кнопки "Сбросить"
+    if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', function() {
+            console.log('Сбрасываем фильтр...');
+            resetFilters();
+        });
+    }
+    
+    // Обработчики для опций сортировки
+    sortOptions.forEach(option => {
+        option.addEventListener('click', function() {
+            sortOptions.forEach(opt => opt.classList.remove('active'));
+            this.classList.add('active');
+            const sortType = this.getAttribute('data-sort');
+            console.log('Выбрана сортировка:', sortType);
+            sortProducts(sortType);
+        });
+    });
+    
+    // Принудительно отображаем все карточки товаров при загрузке
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.classList.remove('hidden-card');
+        card.classList.add('visible-card');
+    });
+    
+    // Функция извлечения цены из карточки товара
+    function extractPrice(product) {
+        const priceElement = product.querySelector('.product-card__price');
+        if (!priceElement) return 0;
+        
+        const priceText = priceElement.textContent.trim();
+        // Извлекаем только цифры из текста цены (например, "15 500 ₽" -> 15500)
+        const priceMatch = priceText.match(/\d[\d\s]*\d/);
+        return priceMatch ? parseInt(priceMatch[0].replace(/\s+/g, '')) : 0;
+    }
+    
+    // Функция извлечения площади из карточки товара
+    function extractArea(product) {
+        const features = product.querySelectorAll('.feature');
+        let area = 0;
+        
+        for (const feature of features) {
+            const nameElement = feature.querySelector('.feature__name');
+            if (nameElement && nameElement.textContent.includes('Площадь')) {
+                const valueElement = feature.querySelector('.feature__value');
+                if (!valueElement) continue;
+                
+                const areaText = valueElement.textContent.trim();
+                // Извлекаем числовое значение из разных форматов ("до 21 м²", "20-30 м²" и т.д.)
+                const areaMatch = areaText.match(/до\s+(\d+)|(\d+)[–-](\d+)|(\d+)/);
+                
+                if (areaMatch) {
+                    if (areaMatch[1]) {
+                        area = parseInt(areaMatch[1]);
+                    } else if (areaMatch[2] && areaMatch[3]) {
+                        area = (parseInt(areaMatch[2]) + parseInt(areaMatch[3])) / 2;
+                    } else if (areaMatch[4]) {
+                        area = parseInt(areaMatch[4]);
+                    }
+                }
+                break;
+            }
+        }
+        return area;
+    }
+    
+    // Функция извлечения производителя из карточки товара (полностью переработана)
+    function extractManufacturer(product) {
+        // Попытка 1: Извлечение из заголовка товара
+        const title = product.querySelector('.product-card__title');
+        if (title) {
+            const titleText = title.textContent.trim();
+            
+            // Вывод для отладки
+            console.log('Определяем производителя для:', titleText);
+            
+            // Проверка на iCongo
+            if (titleText.startsWith('iCongo')) {
+                console.log('Определен производитель: iCongo');
+                return 'iCongo';
+            }
+            
+            // Проверка на Axioma
+            if (titleText.startsWith('Axioma')) {
+                console.log('Определен производитель: Axioma');
+                return 'Axioma';
+            }
+            
+            // Проверка на Морозко
+            if (titleText.startsWith('Морозко')) {
+                console.log('Определен производитель: Морозко');
+                return 'Морозко';
+            }
+            
+            // Дополнительные проверки для Морозко по моделям
+            if (titleText.includes('КНБ-') || titleText.includes('КНБИ-')) {
+                console.log('Определен производитель по модели: Морозко');
+                return 'Морозко';
+            }
+        }
+        
+        // Попытка 2: Проверка по изображению (для случаев, когда производитель не определен по заголовку)
+        const image = product.querySelector('img');
+        if (image && image.src) {
+            const imgSrc = image.src.toLowerCase();
+            
+            if (imgSrc.includes('icongo')) {
+                console.log('Определен производитель по изображению: iCongo');
+                return 'iCongo';
+            }
+            
+            if (imgSrc.includes('axioma')) {
+                console.log('Определен производитель по изображению: Axioma');
+                return 'Axioma';
+            }
+            
+            if (imgSrc.includes('morozko')) {
+                console.log('Определен производитель по изображению: Морозко');
+                return 'Морозко';
+            }
+        }
+        
+        console.log('Производитель не определен для товара');
+        return '';
+    }
+    
+    // Функция применения фильтров
+    function applyFilters() {
+        // Получение значений фильтров
+        const priceMin = parseInt(priceMinInput.value);
+        const priceMax = parseInt(priceMaxInput.value);
+        const areaMin = parseInt(areaMinInput.value);
+        const areaMax = parseInt(areaMaxInput.value);
+        
+        // Получение выбранных производителей
+        const selectedManufacturers = Array.from(manufacturerCheckboxes)
+            .filter(checkbox => checkbox.checked)
+            .map(checkbox => checkbox.value);
+        
+        console.log('Параметры фильтра:', {
+            priceRange: [priceMin, priceMax],
+            areaRange: [areaMin, areaMax],
+            manufacturers: selectedManufacturers
+        });
+        
+        // Проверяем выбранных производителей
+        if (selectedManufacturers.length > 0) {
+            console.log('Выбранные производители:', selectedManufacturers);
+        } else {
+            console.log('Производители не выбраны, показываем все товары');
+        }
+        
+        // Применение фильтров к карточкам товаров
+        const products = document.querySelectorAll('.product-card');
+        let visibleCount = 0;
+        
+        // Сначала скрываем все товары
+        products.forEach(product => {
+            product.classList.add('hidden-card');
+            product.classList.remove('visible-card');
+        });
+        
+        // Затем показываем только те, которые соответствуют фильтрам
+        products.forEach(product => {
+            const price = extractPrice(product);
+            const area = extractArea(product);
+            const manufacturer = extractManufacturer(product);
+            
+            console.log(`Товар: ${product.querySelector('.product-card__title')?.textContent}`, {
+                price, 
+                area, 
+                manufacturer,
+                selected: selectedManufacturers.includes(manufacturer)
+            });
+            
+            let visible = true;
+            
+            // Проверка соответствия фильтрам
+            if (price < priceMin || price > priceMax) {
+                visible = false;
+                console.log('- Не проходит по цене');
+            }
+            
+            if (area < areaMin || area > areaMax) {
+                visible = false;
+                console.log('- Не проходит по площади');
+            }
+            
+            // Проверка производителя
+            if (selectedManufacturers.length > 0) {
+                let found = false;
+                for (const selected of selectedManufacturers) {
+                    if (manufacturer === selected) {
+                        found = true;
+                        break;
+                    }
+                }
+                
+                if (!found) {
+                    visible = false;
+                    console.log('- Не проходит по производителю');
+                }
+            }
+            
+            // Отображение или скрытие карточки товара
+            if (visible) {
+                console.log(`✅ Показываем товар: ${product.querySelector('.product-card__title')?.textContent}`);
+                product.classList.remove('hidden-card');
+                product.classList.add('visible-card');
+                visibleCount++;
+                
+                // Принудительно проверяем видимость после небольшой задержки
+                setTimeout(() => {
+                    if (getComputedStyle(product).display === 'none') {
+                        console.log('⚠️ Товар скрыт стилями CSS:', product.querySelector('.product-card__title')?.textContent);
+                        product.style.display = 'block';
+                    }
+                }, 50);
+            }
+        });
+        
+        // Обновление счетчика товаров
+        if (productsCountElement) {
+            productsCountElement.textContent = visibleCount;
+        }
+        
+        // Отображение сообщения, если ничего не найдено
+        const noResultsElement = document.querySelector('.no-results');
+        if (visibleCount === 0) {
+            if (!noResultsElement) {
+                const noResults = document.createElement('div');
+                noResults.className = 'no-results';
+                noResults.textContent = 'По вашему запросу ничего не найдено. Попробуйте изменить параметры фильтрации.';
+                document.querySelector('.products-grid').appendChild(noResults);
+            }
+        } else if (noResultsElement) {
+            noResultsElement.remove();
+        }
+        
+        // Применение текущей сортировки
+        const activeSort = document.querySelector('.sort-option.active');
+        if (activeSort) {
+            sortProducts(activeSort.getAttribute('data-sort'));
+        }
+        
+        // Вывод общего итога
+        console.log(`Найдено ${visibleCount} товаров из ${products.length}`);
+    }
+    
+    // Функция сброса фильтров
+    function resetFilters() {
+        // Сброс ползунков и полей ввода
+        if (priceMinSlider && priceMaxSlider && priceMinInput && priceMaxInput) {
+            priceMinSlider.value = priceMinSlider.min;
+            priceMaxSlider.value = priceMaxSlider.max;
+            priceMinInput.value = priceMinSlider.min;
+            priceMaxInput.value = priceMaxSlider.max;
+        }
+        
+        if (areaMinSlider && areaMaxSlider && areaMinInput && areaMaxInput) {
+            areaMinSlider.value = areaMinSlider.min;
+            areaMaxSlider.value = areaMaxSlider.max;
+            areaMinInput.value = areaMinSlider.min;
+            areaMaxInput.value = areaMaxSlider.max;
+        }
+        
+        // Сброс чекбоксов производителей
+        manufacturerCheckboxes.forEach(checkbox => {
+            checkbox.checked = true;
+        });
+        
+        // Отображение всех товаров
+        const products = document.querySelectorAll('.product-card');
+        products.forEach(product => {
+            product.classList.remove('hidden-card');
+            product.classList.add('visible-card');
+        });
+        
+        // Обновление счетчика товаров
+        if (productsCountElement) {
+            productsCountElement.textContent = products.length;
+        }
+        
+        // Удаление сообщения "ничего не найдено"
+        const noResultsElement = document.querySelector('.no-results');
+        if (noResultsElement) {
+            noResultsElement.remove();
+        }
+        
+        // Сброс сортировки
+        const defaultSort = document.querySelector('.sort-option[data-sort="popularity"]');
+        if (defaultSort) {
+            sortOptions.forEach(option => option.classList.remove('active'));
+            defaultSort.classList.add('active');
+            sortProducts('popularity');
+        }
+    }
+    
+    // Функция сортировки товаров
+    function sortProducts(sortType) {
+        const productsGrid = document.querySelector('.products-grid');
+        if (!productsGrid) return;
+        
+        // Получение только видимых товаров
+        const visibleProducts = Array.from(document.querySelectorAll('.product-card.visible-card'));
+        
+        // Сортировка товаров
+        visibleProducts.sort((a, b) => {
+            const priceA = extractPrice(a);
+            const priceB = extractPrice(b);
+            const areaA = extractArea(a);
+            const areaB = extractArea(b);
+            
+            switch (sortType) {
+                case 'price-asc':
+                    return priceA - priceB;
+                case 'price-desc':
+                    return priceB - priceA;
+                case 'area-asc':
+                    return areaA - areaB;
+                default: // 'popularity'
+                    return 0; // сохраняем исходный порядок
+            }
+        });
+        
+        // Перемещение отсортированных товаров в сетку
+        visibleProducts.forEach(product => {
+            productsGrid.appendChild(product);
+        });
+    }
+    
+    // Инициализация при загрузке страницы
+    // Обновляем счетчик товаров
+    if (productsCountElement) {
+        productsCountElement.textContent = document.querySelectorAll('.product-card').length;
+    }
+});
 </script>
 
 <!-- Структурированные данные Schema.org для каталога товаров -->

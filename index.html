@@ -164,6 +164,20 @@
                 font-size: 16px;
             }
         }
+        
+        /* Стили для улучшения отображения изображений кондиционеров */
+        .products-grid .product-card:nth-child(1) .product-image img,
+        .products-grid .product-card:nth-child(4) .product-image img {
+            object-fit: contain;
+            padding: 10px;
+            background-color: #f9f9f9;
+        }
+        
+        /* Увеличиваем высоту контейнера для изображений */
+        .products-grid .product-card:nth-child(1) .product-image,
+        .products-grid .product-card:nth-child(4) .product-image {
+            height: 220px;
+        }
     </style>
 </head>
 <body>
