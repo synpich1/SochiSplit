@@ -45,6 +45,14 @@
     <meta name="author" content="Сочи сплит">
     <meta name="theme-color" content="#0099ff">
 
+    <!-- Favicon для современных браузеров -->
+    <link rel="icon" href="favicon.ico" sizes="32x32">
+    <link rel="icon" href="img/icons/favicon.svg" type="image/svg+xml">
+    <!-- Иконка для iOS -->
+    <link rel="apple-touch-icon" href="img/icons/apple-touch-icon.png">
+    <!-- Манифест для PWA -->
+    <link rel="manifest" href="img/icons/manifest.webmanifest">
+
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
@@ -511,6 +519,138 @@
     </footer>
 
     <script src="js/script.js"></script>
+    
+    <!-- Модальное окно для кнопки "Подробнее" -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <p class="modal-text">Вы можете позвонить для уточнения информации по этому номеру: <a href="tel:+79384522225">+7 (938) 452-22-25</a></p>
+        </div>
+    </div>
+
+    <style>
+        /* Стили для модального окна */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.5);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            display: block;
+            opacity: 1;
+        }
+        
+        .modal-content {
+            background-color: #fff;
+            margin: 15% auto;
+            padding: 25px;
+            border-radius: 8px;
+            max-width: 500px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateY(-20px);
+            transition: transform 0.3s ease;
+            position: relative;
+        }
+        
+        .modal.show .modal-content {
+            transform: translateY(0);
+        }
+        
+        .close-modal {
+            position: absolute;
+            right: 15px;
+            top: 10px;
+            color: #888;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        
+        .close-modal:hover {
+            color: #0099ff;
+        }
+        
+        .modal-text {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #333;
+            text-align: center;
+            margin: 10px 0;
+        }
+        
+        .modal-text a {
+            color: #0099ff;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        
+        .modal-text a:hover {
+            color: #0077cc;
+        }
+        
+        /* Стили для темной темы */
+        .dark-theme .modal-content {
+            background-color: #222;
+            color: #fff;
+        }
+        
+        .dark-theme .close-modal {
+            color: #aaa;
+        }
+        
+        .dark-theme .modal-text {
+            color: #eee;
+        }
+    </style>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Получаем модальное окно
+            const modal = document.getElementById('productModal');
+            const closeBtn = document.querySelector('.close-modal');
+            
+            // Получаем все кнопки "Подробнее"
+            const detailButtons = document.querySelectorAll('.product-card .btn-primary');
+            
+            // Добавляем обработчик события для каждой кнопки
+            detailButtons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    modal.classList.add('show');
+                });
+            });
+            
+            // Закрытие модального окна при клике на крестик
+            closeBtn.addEventListener('click', function() {
+                modal.classList.remove('show');
+            });
+            
+            // Закрытие модального окна при клике вне его области
+            window.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.classList.remove('show');
+                }
+            });
+            
+            // Закрытие модального окна при нажатии Escape
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal.classList.contains('show')) {
+                    modal.classList.remove('show');
+                }
+            });
+        });
+    </script>
     
     <!-- Структурированные данные Schema.org для LocalBusiness -->
     <script type="application/ld+json">
