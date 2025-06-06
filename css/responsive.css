@@ -1,0 +1,741 @@
+/* 
+* Сочи сплит - Адаптивные стили
+* Дополнительные стили для мобильной адаптации сайта
+*/
+
+/* === Глобальные правила для фильтрации товаров === */
+/* Обеспечиваем видимость отфильтрованных товаров */
+.product-card[data-filtered="true"] {
+    display: block !important;
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Усиливаем скрытие отфильтрованных товаров */
+.product-card[data-filtered="false"] {
+    display: none !important;
+}
+
+/* === Глобальные адаптивные стили === */
+
+/* Обеспечиваем, что медиа-контент никогда не будет шире своего контейнера */
+img,
+video,
+svg,
+picture,
+iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Улучшение сенсорных целей для мобильных устройств */
+button,
+.btn,
+input[type="submit"],
+input[type="button"],
+.nav-link,
+.social-link {
+    min-height: 44px;
+    min-width: 44px;
+}
+
+/* Предотвращение переполнения текста */
+p, h1, h2, h3, h4, h5, h6, li, td, th {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    hyphens: auto;
+}
+
+/* Адаптивная типографика с использованием clamp */
+h1, .page-title {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h2, .section-title {
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+h3 {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+}
+
+p, li {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+/* Адаптивные таблицы */
+.responsive-table {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    display: block;
+}
+
+/* === Медиа-запросы === */
+
+/* Очень маленькие устройства (до 375px) */
+@media (max-width: 375px) {
+    /* Уменьшение отступов для мобильных устройств */
+    .container {
+        padding: 0 0.75rem;
+    }
+    
+    /* Уменьшение отступов между секциями */
+    section {
+        margin-bottom: 2rem;
+    }
+    
+    /* Корректировка шрифтов для очень маленьких экранов */
+    .logo-text {
+        font-size: 1.25rem;
+    }
+    
+    /* Уменьшение размеров иконок */
+    .feature-icon {
+        width: 40px;
+        height: 40px;
+        font-size: var(--font-size-md);
+    }
+    
+    /* Корректировка карточек продуктов */
+    .product-card {
+        padding: 0.75rem;
+    }
+    
+    /* Уменьшение отступов в футере */
+    .footer-content {
+        padding: 1.5rem 0;
+    }
+}
+
+/* Маленькие устройства (376px - 480px) */
+@media (min-width: 376px) and (max-width: 480px) {
+    /* Дополнительные стили для маленьких устройств */
+    .hero-content {
+        padding: 2rem 0;
+    }
+}
+
+/* Дополнительные стили для планшетов в портретной ориентации */
+@media (min-width: 481px) and (max-width: 768px) {
+    /* Улучшение отображения на планшетах */
+    .about-content, 
+    .delivery-features,
+    .delivery-zones {
+        gap: 2rem;
+    }
+    
+    /* Улучшение отображения карточек */
+    .service-card {
+        padding: 1.5rem;
+    }
+}
+
+/* === Адаптивные стили для конкретных страниц === */
+
+/* Страница доставки */
+@media (max-width: 768px) {
+    /* Улучшение отображения таблицы тарифов */
+    .rates-table table {
+        white-space: nowrap;
+    }
+    
+    /* Улучшение отображения процесса доставки на мобильных */
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .step {
+        margin-bottom: 1.5rem;
+    }
+    
+    /* Увеличиваем отступ сверху для заголовка на странице доставки */
+    .page-header .page-title {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+    }
+    
+    /* Улучшение отображения FAQ */
+    .faq-question h3 {
+        font-size: var(--font-size-md);
+        padding-right: 2rem;
+    }
+    
+    .faq-question i {
+        position: absolute;
+        right: 1rem;
+    }
+}
+
+/* Страница каталога */
+@media (max-width: 768px) {
+    /* Улучшение отображения фильтров */
+    .filter-group {
+        margin-bottom: 1rem;
+    }
+    
+    /* Улучшение отображения карточек продуктов */
+    .product-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .product-features ul li {
+        margin-bottom: 0.25rem;
+    }
+}
+
+/* Страница контактов */
+@media (max-width: 768px) {
+    /* Улучшение отображения контактной информации */
+    .contact-info {
+        grid-template-columns: 1fr;
+    }
+    
+    /* Улучшение отображения формы */
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+}
+
+/* === Улучшения для мобильной навигации === */
+@media (max-width: 768px) {
+    /* Изменяем расположение элементов в шапке */
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    /* Перемещаем кнопку смены темы в шапку для мобильной версии */
+    .theme-switch-wrapper {
+        position: static;
+        margin-left: auto;
+        z-index: 100;
+    }
+    
+    /* Улучшенные стили для гамбургер-меню */
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px;
+        margin: 0 20px; /* Добавляем отступы слева и справа */
+        z-index: 1001;
+        width: 60px;
+        height: 60px;
+        border-radius: 12px;
+        background: var(--gradient-primary); /* Градиентный фон как у других элементов сайта */
+        transition: all 0.3s ease;
+        position: relative;
+        box-shadow: var(--shadow-md); /* Добавляем тень для объема */
+    }
+    
+    .hamburger::after {
+        content: 'Меню';
+        position: absolute;
+        bottom: -2px;
+        font-size: 12px;
+        font-weight: 700;
+        color: white; /* Белый цвет текста для лучшей видимости на градиентном фоне */
+        opacity: 1;
+    }
+    
+    .hamburger:hover, .hamburger:focus {
+        transform: translateY(-3px);
+        box-shadow: var(--shadow-lg);
+    }
+    
+    .bar {
+        width: 30px;
+        height: 3px;
+        margin: 3px auto;
+        transition: all 0.3s ease-in-out;
+        background-color: white; /* Белый цвет полосок для контраста с градиентным фоном */
+        border-radius: 2px;
+    }
+    
+    /* Добавляем анимацию пульсации для привлечения внимания */
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+    
+    .header-loaded .hamburger {
+        animation: pulse 2s ease-in-out 1s;
+    }
+    
+    /* Стили для открытого меню */
+    .hamburger.active {
+        background: var(--primary-dark); /* Темный вариант градиента при активном состоянии */
+    }
+    
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    
+    /* Адаптация герой-секции */
+    .hero {
+        padding: 2rem 0;
+        min-height: auto;
+    }
+    
+    .hero .container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .hero-content {
+        text-align: center;
+        order: 2;
+    }
+    
+    .hero-image {
+        order: 1;
+        justify-content: center;
+    }
+    
+    .hero-title {
+        font-size: clamp(1.8rem, 6vw, 2.5rem);
+    }
+    
+    .hero-subtitle {
+        font-size: clamp(1rem, 4vw, 1.2rem);
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        margin: 0.5rem 0;
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    /* Волны в герой-секции */
+    .wave {
+        height: 50px;
+    }
+    
+    /* Услуги на главной */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .service-card {
+        padding: 1.5rem;
+    }
+    
+    /* Преимущества на главной */
+    .advantages-list {
+        grid-template-columns: 1fr;
+    }
+    
+    .advantage-item {
+        padding: 1.25rem;
+    }
+    
+    /* Улучшенное полноэкранное мобильное меню */
+    .main-nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(255, 255, 255, 1); /* Полностью непрозрачный фон для светлой темы */
+        transition: transform 0.4s ease-in-out, opacity 0.3s ease-in-out;
+        z-index: 999;
+        padding-top: 80px;
+        overflow-y: auto;
+        transform: translateY(-100%); /* Меню появляется сверху */
+        opacity: 0;
+    }
+    
+    /* Стили для темной темы */
+    [data-theme="dark"] .main-nav {
+        background-color: rgba(33, 33, 33, 1); /* Полностью непрозрачный фон для темной темы */
+    }
+    
+    .main-nav.active {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+    .nav-list {
+        flex-direction: column;
+        padding: 2rem;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-item {
+        margin: 1rem 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-link {
+        display: block;
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.5rem;
+        font-weight: 600;
+        border-radius: 8px;
+        margin: 0.5rem 0;
+        transition: all 0.3s ease;
+    }
+    
+    /* Выделение активного пункта меню */
+    .nav-link.active {
+        background-color: rgba(var(--primary-rgb), 0.2);
+        color: var(--primary-color);
+        transform: scale(1.05);
+    }
+    
+    /* Эффект наведения для пунктов меню */
+    .nav-link:hover:not(.active) {
+        background-color: rgba(var(--text-rgb), 0.1);
+        transform: scale(1.05);
+    }
+    
+    /* Добавление кнопки закрытия меню */
+    .close-menu {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: rgba(var(--text-rgb), 0.1);
+        cursor: pointer;
+        z-index: 1002;
+    }
+    
+    .close-menu:before,
+    .close-menu:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: var(--text-color);
+    }
+    
+    .close-menu:before {
+        transform: rotate(45deg);
+    }
+    
+    .close-menu:after {
+        transform: rotate(-45deg);
+    }
+}
+
+/* === Улучшения для больших экранов === */
+@media (min-width: 1441px) {
+    /* Оптимизация для больших экранов */
+    .container {
+        max-width: 1400px;
+    }
+    
+    /* Увеличение размера шрифтов */
+    body {
+        font-size: 18px;
+    }
+    
+    /* Увеличение отступов */
+    section {
+        margin-bottom: 6rem;
+    }
+}
+
+/* === Ориентация устройства === */
+@media (orientation: landscape) and (max-width: 768px) {
+    /* Корректировки для мобильных устройств в альбомной ориентации */
+    .header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    
+    /* Предотвращение слишком высоких блоков */
+    .hero-content,
+    .page-header {
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    /* Меньшие отступы для контента */
+    section {
+        padding: 2rem 0;
+    }
+}
+
+/* === Улучшения для печати === */
+@media print {
+    /* Скрытие элементов, не нужных при печати */
+    .hamburger,
+    .theme-switch-wrapper,
+    .hero-buttons,
+    .footer {
+        display: none !important;
+    }
+    
+    /* Принудительный фон и цвет текста */
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    /* Принудительное отображение скрытого контента */
+    .main-nav {
+        display: block !important;
+        position: static !important;
+    }
+    
+    /* Оптимизация гиперссылок для печати */
+    a::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+    }
+    
+    /* Разрывы страниц */
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+    
+    img {
+        page-break-inside: avoid;
+    }
+}
+
+/* === Адаптивные формы === */
+@media (max-width: 768px) {
+    /* Улучшение стилей форм для мобильных */
+    .form-group {
+        margin-bottom: 1.25rem;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+        padding: 12px 15px;
+        font-size: 1rem;
+    }
+    
+    .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Улучшение контактной формы */
+    .contact-form-wrapper {
+        padding: 1.5rem;
+    }
+    
+    .social-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+/* === Улучшение адаптивности карточек продуктов === */
+@media (max-width: 768px) {
+    .product-card {
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        margin-bottom: 1.5rem;
+    }
+    
+    .products-grid,
+    .catalog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .product-image {
+        height: auto;
+    }
+    
+    .product-specs {
+        flex-wrap: wrap;
+    }
+    
+    .spec {
+        margin-bottom: 0.5rem;
+    }
+    
+    /* Улучшение отображения фильтров */
+    .filters-container {
+        flex-direction: column;
+        padding: 1rem;
+    }
+    
+    .filter-group {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    
+    .filter-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .filter-btn,
+    .reset-filter-btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+/* === Улучшения для контактной страницы === */
+@media (max-width: 768px) {
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .contact-info-items {
+        grid-template-columns: 1fr;
+    }
+    
+    .contact-item {
+        padding: 1rem;
+    }
+    
+    .map-container {
+        height: 300px;
+    }
+}
+
+/* === Улучшения для страницы о нас === */
+@media (max-width: 768px) {
+    .history-content,
+    .mission-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .team-card {
+        margin-bottom: 2rem;
+    }
+}
+
+/* === Улучшение отображения footer === */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .footer-links {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .copyright {
+        margin-bottom: 1rem;
+    }
+}
+
+/* === Адаптивные стили для секции скачивания каталога === */
+@media (max-width: 992px) {
+    .catalog-download-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .catalog-download-content,
+    .catalog-download-image {
+        width: 100%;
+    }
+    
+    .catalog-download-image {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .pdf-preview {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .catalog-download-section {
+        padding: 50px 0;
+    }
+    
+    .catalog-description {
+        font-size: 16px;
+        line-height: 1.5;
+    }
+    
+    .feature {
+        font-size: 15px;
+    }
+    
+    .pdf-icon {
+        font-size: 100px;
+    }
+    
+    .pdf-title {
+        font-size: 20px;
+    }
+    
+    .pdf-date {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .download-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 16px;
+    }
+    
+    .pdf-preview {
+        padding: 30px;
+        transform: rotate(0);
+    }
+    
+    .pdf-preview:hover {
+        transform: scale(1.02);
+    }
+    
+    .catalog-features {
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+} 

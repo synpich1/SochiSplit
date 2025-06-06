@@ -1,0 +1,845 @@
+/* 
+* Сочи сплит - Анимации
+* Современные анимации в соответствии с трендами 2025 года
+*/
+
+/* === Плавное появление элементов === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Задержки для последовательной анимации */
+.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.delay-4 {
+    animation-delay: 0.4s;
+}
+
+.delay-5 {
+    animation-delay: 0.5s;
+}
+
+/* === Пульсация === */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite ease-in-out;
+}
+
+/* === Волны === */
+@keyframes wave {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+/* === Плавающий эффект === */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* === Вращение === */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotate {
+    animation: rotate 10s linear infinite;
+}
+
+.rotate-slow {
+    animation: rotate 20s linear infinite;
+}
+
+/* === Частицы === */
+.particle {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+}
+
+@keyframes particleAnimation {
+    0% {
+        transform: translate(0, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(var(--x), var(--y));
+        opacity: 0;
+    }
+}
+
+/* === Подсветка === */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 5px rgba(0, 153, 255, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 153, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(0, 153, 255, 0.5);
+    }
+}
+
+.glow {
+    animation: glow 2s infinite;
+}
+
+/* === Эффект печати === */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--primary-color);
+    }
+}
+
+.typing {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid var(--primary-color);
+    animation: 
+        typing 3.5s steps(40, end),
+        blink-caret 0.75s step-end infinite;
+}
+
+/* === Микроанимации для интерактивных элементов === */
+
+/* Кнопки */
+.btn {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+/* Эффект волны при клике */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.ripple:active::after {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+    transition: width 0.6s ease-out, height 0.6s ease-out, opacity 0.6s ease-out;
+}
+
+/* === Анимации для карточек === */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* === Анимация градиента === */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animated-gradient {
+    background: linear-gradient(-45deg, #0099ff, #00e5ff, #33adff, #0077cc);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+/* === Анимация для загрузки === */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    border-top-color: var(--primary-color);
+    animation: spin 1s ease-in-out infinite;
+}
+
+/* === Анимация для скролла === */
+.scroll-animation {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.scroll-animation.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* === Анимация для навигации === */
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gradient-primary);
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.nav-link.active::before {
+    width: 100%;
+}
+
+/* === Анимация для иконок === */
+.icon-hover {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-hover:hover {
+    transform: scale(1.2);
+    color: var(--primary-color);
+}
+
+/* === Анимация для изображений === */
+.img-zoom {
+    overflow: hidden;
+}
+
+.img-zoom img {
+    transition: transform 0.5s ease;
+}
+
+.img-zoom:hover img {
+    transform: scale(1.1);
+}
+
+/* === Анимация для переключения темы === */
+.theme-transition {
+    transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* === Анимация для формы === */
+.form-control {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 153, 255, 0.2);
+}
+
+/* === 3D эффект при наведении === */
+.tilt {
+    transition: transform 0.3s ease;
+    transform-style: preserve-3d;
+}
+
+.tilt:hover {
+    transform: perspective(1000px) rotateX(2deg) rotateY(2deg);
+}
+
+/* === Анимация для прогресс-бара === */
+@keyframes progress {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.progress-bar {
+    height: 4px;
+    background: var(--gradient-primary);
+    animation: progress 2s ease forwards;
+}
+
+/* === Анимация для счетчика === */
+@keyframes count {
+    from {
+        content: "0";
+    }
+    to {
+        content: attr(data-count);
+    }
+}
+
+.counter::after {
+    content: "0";
+    animation: count 2s forwards;
+}
+
+/* === Анимация для уведомлений === */
+@keyframes notification {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    10% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+}
+
+.notification {
+    animation: notification 5s forwards;
+}
+
+/* === Анимации для страницы каталога === */
+
+/* Анимация появления заголовка страницы */
+.page-header .page-title {
+    animation: slideInDown 0.8s ease forwards;
+}
+
+.page-header .page-subtitle {
+    animation: slideInUp 0.8s ease forwards;
+    animation-delay: 0.2s;
+    opacity: 0;
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(30px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Анимация для карточек товаров */
+.catalog-grid .product-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Задержка для каждой карточки */
+.catalog-grid .product-card:nth-child(1) { animation-delay: 0.1s; }
+.catalog-grid .product-card:nth-child(2) { animation-delay: 0.2s; }
+.catalog-grid .product-card:nth-child(3) { animation-delay: 0.3s; }
+.catalog-grid .product-card:nth-child(4) { animation-delay: 0.4s; }
+.catalog-grid .product-card:nth-child(5) { animation-delay: 0.5s; }
+.catalog-grid .product-card:nth-child(6) { animation-delay: 0.6s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для фильтров */
+.filters-container .filter-group {
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+}
+
+.filters-container .filter-group:nth-child(1) { animation-delay: 0.1s; }
+.filters-container .filter-group:nth-child(2) { animation-delay: 0.2s; }
+.filters-container .filter-group:nth-child(3) { animation-delay: 0.3s; }
+.filters-container .filter-group:nth-child(4) { animation-delay: 0.4s; }
+.filters-container .filter-btn { animation-delay: 0.5s; }
+
+/* Эффект пульсации для меток "Хит продаж" и "Новинка" */
+.product-label {
+    animation: pulse 2s infinite;
+}
+
+/* Эффект наведения для изображений товаров */
+.product-card:hover .product-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0,153,255,0) 0%, rgba(0,153,255,0.2) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    opacity: 1;
+}
+
+/* Анимация для кнопки "В корзину" */
+.btn-outline.btn-sm {
+    overflow: hidden;
+    position: relative;
+}
+
+.btn-outline.btn-sm::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background-color: rgba(0, 153, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+.btn-outline.btn-sm:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Анимация для пагинации */
+.pagination-item, .pagination-next {
+    transform: scale(1);
+    transition: transform 0.2s ease;
+}
+
+.pagination-item:hover, .pagination-next:hover {
+    transform: scale(1.1);
+}
+
+/* === Анимации для страницы доставки === */
+
+/* Появление снизу */
+.slide-up {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideUp 1s ease forwards;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Появление сверху */
+.slide-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    animation: slideDown 1s ease forwards;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Появление слева */
+.slide-right {
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: slideRight 1s ease forwards;
+}
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Появление справа */
+.slide-left {
+    opacity: 0;
+    transform: translateX(50px);
+    animation: slideLeft 1s ease forwards;
+}
+
+@keyframes slideLeft {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Увеличение */
+.scale-up {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: scaleUp 1s ease forwards;
+}
+
+@keyframes scaleUp {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Эффект пульсации */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Эффект волны */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: scale(0);
+    border-radius: 50%;
+    transition: transform 0.6s;
+}
+
+.ripple:active::after {
+    transform: scale(2);
+    opacity: 0;
+    transition: transform 0.6s, opacity 0.6s;
+}
+
+/* Плавающий эффект */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Анимации для страницы доставки */
+
+/* Анимация при скролле */
+.delivery-map.animated,
+.delivery-zones-info.animated,
+.rates-table.animated,
+.additional-services.animated,
+.features-content.animated,
+.features-image.animated,
+.delivery-form-container.animated {
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация шагов процесса доставки */
+.process-steps .step {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.process-steps .step.animated {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.process-steps .step:nth-child(1).animated {
+    transition-delay: 0.1s;
+}
+
+.process-steps .step:nth-child(2).animated {
+    transition-delay: 0.3s;
+}
+
+.process-steps .step:nth-child(3).animated {
+    transition-delay: 0.5s;
+}
+
+.process-steps .step:nth-child(4).animated {
+    transition-delay: 0.7s;
+}
+
+/* Анимация иконок */
+@keyframes rotateIcon {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.feature-icon i {
+    transition: transform 0.5s ease;
+}
+
+.features-list li:hover .feature-icon i {
+    animation: rotateIcon 1s ease;
+}
+
+/* Анимация для успешной отправки формы */
+.success-message {
+    padding: 2rem;
+    text-align: center;
+    animation: fadeInScale 0.5s ease;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.success-message i {
+    font-size: 3rem;
+    color: #4CAF50;
+    margin-bottom: 1rem;
+    animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Анимация для полей формы с ошибкой */
+.form-group input.error,
+.form-group textarea.error {
+    border-color: #ff3860;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    20%, 60% {
+        transform: translateX(-5px);
+    }
+    40%, 80% {
+        transform: translateX(5px);
+    }
+}
+
+/* Анимация для изображений при наведении */
+.img-zoom {
+    transition: transform 0.5s ease;
+}
+
+.img-zoom:hover {
+    transform: scale(1.05);
+}
+
+/* Задержки для анимаций */
+.delay-1 {
+    animation-delay: 0.2s;
+}
+
+.delay-2 {
+    animation-delay: 0.4s;
+}
+
+.delay-3 {
+    animation-delay: 0.6s;
+}
+
+.delay-4 {
+    animation-delay: 0.8s;
+}
+
+/* Анимации для мобильных устройств */
+@media (max-width: 768px) {
+    .delay-1,
+    .delay-2,
+    .delay-3,
+    .delay-4 {
+        animation-delay: 0.1s;
+    }
+} 

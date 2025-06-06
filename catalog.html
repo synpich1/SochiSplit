@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Каталог кондиционеров в Сочи | Цены и характеристики | Сочи сплит</title>
+<meta name="description" content="Большой выбор кондиционеров и сплит-систем различных производителей по выгодным ценам в Сочи и Абхазии. Официальная гарантия. Быстрая доставка. ☎ 8 938 452 22 25">
+<meta name="keywords" content="каталог кондиционеров, сплит-системы Сочи, купить кондиционер, цены на кондиционеры, инверторные кондиционеры, настенные сплит-системы">
+<link rel="canonical" href="https://сочисплит.рф/catalog.html">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+<!-- Open Graph теги -->
+<meta property="og:locale" content="ru_RU">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Каталог кондиционеров в Сочи | Цены и характеристики | Сочи сплит">
+<meta property="og:description" content="Большой выбор кондиционеров и сплит-систем различных производителей по выгодным ценам в Сочи и Абхазии. Официальная гарантия. Быстрая доставка.">
+<meta property="og:url" content="https://сочисплит.рф/catalog.html">
+<meta property="og:site_name" content="Сочи сплит">
+<meta property="og:image" content="https://сочисплит.рф/img/catalog-preview.jpg">
+
+<!-- Twitter Card теги -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Каталог кондиционеров в Сочи | Цены и характеристики | Сочи сплит">
+<meta name="twitter:description" content="Большой выбор кондиционеров и сплит-систем по выгодным ценам в Сочи и Абхазии. Официальная гарантия. Быстрая доставка.">
+<meta name="twitter:image" content="https://сочисплит.рф/img/catalog-preview.jpg">
+
+<!-- Дополнительные мета-теги -->
+<meta name="author" content="Сочи сплит">
+<meta name="theme-color" content="#0099ff">
+
+<link rel="stylesheet" href="css/styles.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<script crossorigin="anonymous" src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+    /* Стили для заголовка в мобильной версии */
+    @media (max-width: 768px) {
+        .page-header .page-title {
+            margin-top: 20px;
+            padding-top: 15px;
+        }
+    }
+
+    /* Стили для слайдера изображений */
+    .product-slider {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+
+    .slider-container {
+        width: 100%;
+        height: 100%;
+        position: relative;
+    }
+
+    .slider-slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .slider-slide.active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    .slider-slide img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px 8px 0 0;
+        background-color: #f8f9fa;
+    }
+
+    /* Стиль для всех изображений в карточках товаров */
+    .product-card__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        border-radius: 8px 8px 0 0;
+        background-color: #f8f9fa;
+    }
+
+    .slider-controls {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 10px;
+        z-index: 2;
+    }
+
+    .slider-prev,
+    .slider-next {
+        background-color: rgba(255, 255, 255, 0.7);
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+        color: #333;
+    }
+
+    .slider-prev:hover,
+    .slider-next:hover {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .slider-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .slider-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+        transition: background-color 0.2s ease;
+    }
+
+    .slider-dot.active {
+        background-color: #fff;
+    }
+
+    /* Адаптивность для мобильных устройств */
+    @media (max-width: 768px) {
+        .slider-controls {
+            padding: 0 8px;
+        }
+        
+        .slider-prev,
+        .slider-next {
+            width: 25px;
+            height: 25px;
+            font-size: 12px;
+        }
+        
+        .slider-dot {
+            width: 6px;
+            height: 6px;
+        }
+    }
+</style>
+</head>
+<body>
+<!-- Шапка сайта -->
+<header class="header">
+<div class="container">
+<div class="logo">
+<a href="index.html">
+<span class="logo-text">Сочи <span class="accent"> сплит</span></span>
+</a>
+</div>
+<!-- Переключатель темы (перемещен в шапку) -->
+<div class="theme-switch-wrapper">
+<label class="theme-switch" for="checkbox">
+<input id="checkbox" type="checkbox"/>
+<div class="slider round">
+<i class="fas fa-sun"></i>
+<i class="fas fa-moon"></i>
+</div>
+</label>
+</div>
+<nav class="main-nav">
+<ul class="nav-list">
+<li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+<li class="nav-item"><a class="nav-link active" href="catalog.html">Каталог</a></li>
+<li class="nav-item"><a class="nav-link" href="delivery.html">Доставка</a></li>
+<li class="nav-item"><a class="nav-link" href="installation.html">Монтаж</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+<li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+</ul>
+</nav>
+<div aria-label="Открыть меню навигации" class="hamburger" role="button" tabindex="0" title="Открыть меню навигации">
+<span class="bar"></span>
+<span class="bar"></span>
+<span class="bar"></span>
+</div>
+</div>
+</header>
+<!-- Заголовок страницы -->
+<section class="page-header">
+<div class="container">
+<h1 class="page-title">Широкий выбор кондиционеров напрямую со склада по оптовым ценам в Сочи</h1>
+</div>
+</section>
+
+<!-- Каталог кондиционеров -->
+<section class="products-section">
+<div class="container">
+    <div class="section-header">
+        <h2 class="section-title">Каталог <span class="accent">кондиционеров</span></h2>
+        <div class="section-line"></div>
+    </div>
+    <div class="products-grid">
+        <!-- Карточка товара 1 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/iCongo/icongo_cs_21h3a_b170am1.jpg" alt="iCongo CS-21H3A-B170AM1 - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_21h3a_b170am1_outdoor.jpg" alt="iCongo CS-21H3A-B170AM1 - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_21h3a_b170am1_remote.jpg" alt="iCongo CS-21H3A-B170AM1 - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card__badge">Хит продаж</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-21H3A-B170AM1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.1 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 21 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">28 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">15 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 2 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/iCongo/icongo_cs_09h3a_t159am2.jpg" alt="iCongo CS-09H3A-T159AM2 - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_09h3a_t159am2_outdoor.jpg" alt="iCongo CS-09H3A-T159AM2 - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_09h3a_t159am2_remote.jpg" alt="iCongo CS-09H3A-T159AM2 - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-09H3A-T159AM2</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">0.9 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 9 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">WiFi:</span>
+                        <span class="feature__value">встроенный</span>
+                    </div>
+                </div>
+                <div class="product-card__price">9 300 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 3 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/iCongo/icongo_cs_24h3a_tl36am4.jpg" alt="iCongo CS-24H3A-TL36AM4 - основной вид">
+                <div class="product-card__badge">Новинка</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-24H3A-TL36AM4</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.4 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 24 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Инверторный:</span>
+                        <span class="feature__value">да</span>
+                    </div>
+                </div>
+                <div class="product-card__price">21 900 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 4 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/iCongo/icongo_cs_18h3a_vl45ae2.jpg" alt="iCongo CS-18H3A-VL45AE2 - основной вид">
+                <div class="product-card__badge">Скидка</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-18H3A-VL45AE2</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">1.8 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 18 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Очистка воздуха:</span>
+                        <span class="feature__value">ионизатор</span>
+                    </div>
+                </div>
+                <div class="product-card__price">16 800 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 5 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/iCongo/icongo_cs_51h3acs_1b170ae5a.jpg" alt="iCongo CS-51H3ACS-1B170AE5A">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_51h3acs_1b170ae5a_outdoor.jpg" alt="iCongo CS-51H3ACS-1B170AE5A - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_51h3acs_1b170ae5a_remote.jpg" alt="iCongo CS-51H3ACS-1B170AE5A - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card__badge">Популярный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-51H3ACS-1B170AE5A</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">5.5 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 50 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Режимы работы:</span>
+                        <span class="feature__value">охлаждение/обогрев/осушение</span>
+                    </div>
+                </div>
+                <div class="product-card__price">43 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 6 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/iCongo/icongo_cs_07h3a_wb147am3.jpg" alt="iCongo CS-07H3A-WB147AM3 - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_07h3a_wb147am3_outdoor.jpg" alt="iCongo CS-07H3A-WB147AM3 - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_07h3a_wb147am3_remote.jpg" alt="iCongo CS-07H3A-WB147AM3 - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-07H3A-WB147AM3</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">0.7 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 7 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Класс энергоэффективности:</span>
+                        <span class="feature__value">A++</span>
+                    </div>
+                </div>
+                <div class="product-card__price">8 200 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 7 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/iCongo/icongo_cs_88h3a_1h170ae3.jpg" alt="iCongo CS-88H3A-1H170AE3">
+                <div class="product-card__badge">Для больших помещений</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-88H3A-1H170AE3</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">8.8 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 88 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Мощность обогрева:</span>
+                        <span class="feature__value">9.0 кВт</span>
+                    </div>
+                </div>
+                <div class="product-card__price">68 900 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 8 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/iCongo/icongo_ct3s_100h3a_at3a.jpg" alt="iCongo CT3S-100H3A-AT3A">
+                <div class="product-card__badge">Для больших помещений</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CT3S-100H3A-AT3A</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">10.5 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 100 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Режимы работы:</span>
+                        <span class="feature__value">охлаждение/обогрев/осушение</span>
+                    </div>
+                </div>
+                <div class="product-card__price">87 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 9 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/iCongo/icongo_cs_25v3g_b170ay8b.jpg" alt="iCongo CS-25V3G-B170AY8B - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_25v3g_b170ay8b_outdoor.jpg" alt="iCongo CS-25V3G-B170AY8B - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_25v3g_b170ay8b_remote.jpg" alt="iCongo CS-25V3G-B170AY8B - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-25V3G-B170AY8B</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.5 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 25 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Класс энергоэффективности:</span>
+                        <span class="feature__value">A+++/A+</span>
+                    </div>
+                </div>
+                <div class="product-card__price">26 300 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 10 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/iCongo/icongo_cs_35v3g_1c170ay8a.jpg" alt="iCongo CS-35V3G-1C170AY8A - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_35v3g_1c170ay8a_outdoor.jpg" alt="iCongo CS-35V3G-1C170AY8A - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/iCongo/icongo_cs_35v3g_1c170ay8a_remote.jpg" alt="iCongo CS-35V3G-1C170AY8A - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">iCongo CS-35V3G-1C170AY8A</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">3.5 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 35 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Мощность обогрева:</span>
+                        <span class="feature__value">3.5 кВт</span>
+                    </div>
+                </div>
+                <div class="product-card__price">33 200 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 11 - Axioma ASX07F1/ASB07F1 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Axioma/axioma_asx07f1_asb07f1.jpg" alt="Axioma ASX07F1/ASB07F1">
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX07F1/ASB07F1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.1 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 20 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">23 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">15 900 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 12 - Axioma ASX09F1/ASB09F1 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Axioma/axioma_asx09f1_asb09f1.jpg" alt="Axioma ASX09F1/ASB09F1">
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX09F1/ASB09F1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.5 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 25 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">23 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">19 700 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 13 - Axioma ASX12F1/ASB12F1 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/Axioma/axioma_asx12f1_asb12f1.jpg" alt="Axioma ASX12F1/ASB12F1 - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Axioma/axioma_asx12f1_asb12f1_outdoor.jpg" alt="Axioma ASX12F1/ASB12F1 - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Axioma/axioma_asx12f1_asb12f1_remote.jpg" alt="Axioma ASX12F1/ASB12F1 - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX12F1/ASB12F1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">3.4 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 35 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">27 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">27 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 14 - Axioma ASX18F1/ASB18F1 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/Axioma/axioma_asx18f1_asb18f1.jpg" alt="Axioma ASX18F1/ASB18F1 - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Axioma/axioma_asx18f1_asb18f1_outdoor.jpg" alt="Axioma ASX18F1/ASB18F1 - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Axioma/axioma_asx18f1_asb18f1_remote.jpg" alt="Axioma ASX18F1/ASB18F1 - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX18F1/ASB18F1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">5.3 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 50 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">31 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">44 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 15 - Axioma ASX24F1/ASB24F1 -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Axioma/axioma_asx24f1_asb24f1.jpg" alt="Axioma ASX24F1/ASB24F1">
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX24F1/ASB24F1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">7.1 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 70 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">32 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">58 900 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 16 - Axioma ASX07FZ1/ASB07FZ1 (инвертор) -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Axioma/axioma_asx07fz1_asb07fz1_inverter.jpg" alt="Axioma ASX07FZ1/ASB07FZ1">
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX07FZ1/ASB07FZ1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.1 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 20 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">22 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">21 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 17 - Axioma ASX09FZ1/ASB09FZ1 (инвертор) -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/Axioma/axioma_asx09fz1_asb09fz1_inverter.jpg" alt="Axioma ASX09FZ1/ASB09FZ1 - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Axioma/axioma_asx09fz1_asb09fz1_inverter_outdoor.jpg" alt="Axioma ASX09FZ1/ASB09FZ1 - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Axioma/axioma_asx09fz1_asb09fz1_inverter_remote.jpg" alt="Axioma ASX09FZ1/ASB09FZ1 - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX09FZ1/ASB09FZ1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.7 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 25 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Инверторная технология:</span>
+                        <span class="feature__value">да</span>
+                    </div>
+                </div>
+                <div class="product-card__price">24 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 18 - Axioma ASX12FZ1/ASB12FZ1 (инвертор) -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/Axioma/axioma_asx12fz1_asb12fz1_inverter.jpg" alt="Axioma ASX12FZ1/ASB12FZ1 - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Axioma/axioma_asx12fz1_asb12fz1_inverter_outdoor.jpg" alt="Axioma ASX12FZ1/ASB12FZ1 - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Axioma/axioma_asx12fz1_asb12fz1_inverter_remote.jpg" alt="Axioma ASX12FZ1/ASB12FZ1 - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX12FZ1/ASB12FZ1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">3.4 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 35 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">23 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">30 200 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 19 - Axioma ASX18FZ1/ASB18FZ1 (инвертор) -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Axioma/axioma_asx18fz1_asb18fz1_inverter.jpg" alt="Axioma ASX18FZ1/ASB18FZ1">
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX18FZ1/ASB18FZ1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">5.1 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 50 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">28 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">55 300 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 20 - Axioma ASX24FZ1/ASB24FZ1 (инвертор) -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Axioma/axioma_asx24fz1_asb24fz1_inverter.jpg" alt="Axioma ASX24FZ1/ASB24FZ1">
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Axioma ASX24FZ1/ASB24FZ1</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">7.4 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 70 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">29 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">72 000 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 21 - Морозко КНБ-БКЛ07ОН -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/Morozko/morozko_knb_bkl07on.jpg" alt="Морозко КНБ-БКЛ07ОН - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Morozko/morozko_knb_bkl07on_outdoor.jpg" alt="Морозко КНБ-БКЛ07ОН - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Morozko/morozko_knb_bkl07on_remote.jpg" alt="Морозко КНБ-БКЛ07ОН - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Морозко КНБ-БКЛ07ОН</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.2 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 22 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Класс энергоэффективности:</span>
+                        <span class="feature__value">A</span>
+                    </div>
+                </div>
+                <div class="product-card__price">16 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 22 - Морозко КНБ-БКЛО9ОН -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/Morozko/morozko_knb_bkl09on.jpg" alt="Морозко КНБ-БКЛО9ОН - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Morozko/morozko_knb_bkl09on_outdoor.jpg" alt="Морозко КНБ-БКЛО9ОН - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Morozko/morozko_knb_bkl09on_remote.jpg" alt="Морозко КНБ-БКЛО9ОН - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Морозко КНБ-БКЛО9ОН</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.5 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 25 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">26 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">19 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 23 - Морозко КНБ-БКЛ120НА -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Morozko/morozko_knb_bkl120na.jpg" alt="Морозко КНБ-БКЛ120НА">
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Морозко КНБ-БКЛ120НА</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">3.52 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 35 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">26 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">27 200 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 24 - Морозко КНБ-БКЛ180НА -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Morozko/morozko_knb_bkl180na.jpg" alt="Морозко КНБ-БКЛ180НА">
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Морозко КНБ-БКЛ180НА</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">5.3 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 53 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Класс энергоэффективности:</span>
+                        <span class="feature__value">A</span>
+                    </div>
+                </div>
+                <div class="product-card__price">43 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 25 - Морозко КНБ-БКЛ24ОНА -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/Morozko/morozko_knb_bkl240na.jpg" alt="Морозко КНБ-БКЛ24ОНА - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Morozko/morozko_knb_bkl240na_outdoor.jpg" alt="Морозко КНБ-БКЛ24ОНА - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Morozko/morozko_knb_bkl240na_remote.jpg" alt="Морозко КНБ-БКЛ24ОНА - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Морозко КНБ-БКЛ24ОНА</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">7.05 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 71 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Класс энергоэффективности:</span>
+                        <span class="feature__value">A</span>
+                    </div>
+                </div>
+                <div class="product-card__price">56 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 26 - Морозко КНБИ-БКЛО7ОН (инвертор) -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <div class="product-slider">
+                    <div class="slider-container">
+                        <div class="slider-slide active">
+                            <img src="img/Morozko/morozko_knbi_bkl07on_inverter.jpg" alt="Морозко КНБИ-БКЛО7ОН - основной вид">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Morozko/morozko_knbi_bkl07on_inverter_outdoor.jpg" alt="Морозко КНБИ-БКЛО7ОН - внешний блок">
+                        </div>
+                        <div class="slider-slide">
+                            <img src="img/Morozko/morozko_knbi_bkl07on_inverter_remote.jpg" alt="Морозко КНБИ-БКЛО7ОН - пульт управления">
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-prev" aria-label="Предыдущее изображение"><i class="fas fa-chevron-left"></i></button>
+                        <div class="slider-dots">
+                            <span class="slider-dot active" data-slide="0"></span>
+                            <span class="slider-dot" data-slide="1"></span>
+                            <span class="slider-dot" data-slide="2"></span>
+                        </div>
+                        <button class="slider-next" aria-label="Следующее изображение"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Морозко КНБИ-БКЛО7ОН</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.25 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 23 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">22 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">23 500 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 27 - Морозко КНБИ-БКЛ09ОН (инвертор) -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Morozko/morozko_knbi_bkl09on_inverter.jpg" alt="Морозко КНБИ-БКЛ09ОН">
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Морозко КНБИ-БКЛ09ОН</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">2.8 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 28 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Инверторная технология:</span>
+                        <span class="feature__value">да</span>
+                    </div>
+                </div>
+                <div class="product-card__price">26 300 ₽</div>
+            </div>
+        </div>
+        
+        <!-- Карточка товара 28 - Морозко КНБИ-БКЛ120Н (инвертор) -->
+        <div class="product-card">
+            <div class="product-card__image">
+                <img src="img/Morozko/morozko_knbi_bkl120n_inverter.jpg" alt="Морозко КНБИ-БКЛ120Н">
+                <div class="product-card__badge">Инверторный</div>
+            </div>
+            <div class="product-card__content">
+                <h3 class="product-card__title">Морозко КНБИ-БКЛ120Н</h3>
+                <div class="product-card__features">
+                    <div class="feature">
+                        <span class="feature__name">Мощность охлаждения:</span>
+                        <span class="feature__value">3.55 кВт</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Площадь помещения:</span>
+                        <span class="feature__value">до 36 м²</span>
+                    </div>
+                    <div class="feature">
+                        <span class="feature__name">Уровень шума:</span>
+                        <span class="feature__value">23.5 дБ</span>
+                    </div>
+                </div>
+                <div class="product-card__price">30 800 ₽</div>
+            </div>
+        </div>
+    </div>
+    <div class="products-more">
+        <button class="btn btn-accent btn-lg">Показать еще</button>
+    </div>
+</div>
+</section>
+
+<!-- Преимущества -->
+<section class="advantages-section">
+<div class="container">
+<div class="section-header">
+<h2 class="section-title">Почему выбирают <span class="accent">нас</span></h2>
+<div class="section-line"></div>
+</div>
+<div class="advantages-list">
+<div class="advantage-item">
+<div class="advantage-number">01</div>
+<div class="advantage-content">
+<h3 class="advantage-title">Оптовые цены</h3>
+<p class="advantage-description">Работаем напрямую с оптового склада, без посредников.</p>
+</div>
+</div>
+<div class="advantage-item">
+<div class="advantage-number">02</div>
+<div class="advantage-content">
+<h3 class="advantage-title">Профессиональный монтаж</h3>
+<p class="advantage-description">Опытные мастера с многолетним стажем работы.</p>
+</div>
+</div>
+<div class="advantage-item">
+<div class="advantage-number">03</div>
+<div class="advantage-content">
+<h3 class="advantage-title">Гарантия качества</h3>
+<p class="advantage-description">Официальная гарантия на оборудование и монтажные работы.</p>
+</div>
+</div>
+<div class="advantage-item">
+<div class="advantage-number">04</div>
+<div class="advantage-content">
+<h3 class="advantage-title">Быстрая доставка</h3>
+<p class="advantage-description">Доставляем в день заказа или на следующий день.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Футер -->
+<footer class="footer">
+<div class="container">
+<div class="footer-content">
+<div class="footer-logo">
+<span class="logo-text">Сочи<span class="accent"> сплит</span></span>
+<p>Ваш билет в прохладу Сочи и Абхазии!</p>
+</div>
+<div class="footer-links">
+<div class="footer-column">
+<h3>Навигация</h3>
+<ul>
+<li><a href="index.html">Главная</a></li>
+<li><a href="catalog.html">Каталог</a></li>
+<li><a href="delivery.html">Доставка</a></li>
+<li><a href="installation.html">Монтаж</a></li>
+<li><a href="about.html">О нас</a></li>
+<li><a href="contacts.html">Контакты</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Услуги</h3>
+<ul>
+<li><a href="#">Продажа кондиционеров</a></li>
+<li><a href="#">Монтаж кондиционеров</a></li>
+<li><a href="#">Сервисное обслуживание</a></li>
+<li><a href="#">Ремонт кондиционеров</a></li>
+</ul>
+</div>
+<div class="footer-column">
+<h3>Контакты</h3>
+<ul>
+<li><a href="tel:+7 (938) 452-22-25">+7 (938) 452-22-25</a></li>
+<li>г. Сочи, ул Олимпийская, д. 25</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="footer-bottom">
+<div class="copyright">
+                    © 2025 Сочи сплит. Все права защищены.
+                </div>
+<div class="social-links">
+<a class="social-link" href="#"><i class="fab fa-facebook-f"></i></a>
+<a class="social-link" href="#"><i class="fab fa-instagram"></i></a>
+<a class="social-link" href="#"><i class="fab fa-vk"></i></a>
+<a class="social-link" href="#"><i class="fab fa-whatsapp"></i></a>
+</div>
+</div>
+</div>
+</footer>
+<script src="js/script.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Инициализация всех слайдеров на странице
+    initProductSliders();
+});
+
+// Функция инициализации всех слайдеров
+function initProductSliders() {
+    // Находим все слайдеры на странице
+    const sliders = document.querySelectorAll('.product-slider');
+    
+    // Инициализируем каждый слайдер
+    sliders.forEach(slider => {
+        initSlider(slider);
+    });
+}
+
+// Функция инициализации отдельного слайдера
+function initSlider(slider) {
+    const slides = slider.querySelectorAll('.slider-slide');
+    const dots = slider.querySelectorAll('.slider-dot');
+    const prevBtn = slider.querySelector('.slider-prev');
+    const nextBtn = slider.querySelector('.slider-next');
+    
+    let currentIndex = 0;
+    let slideInterval;
+    
+    // Установка обработчика события для кнопки "Предыдущий слайд"
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() {
+            clearAutoSlide();
+            showSlide(currentIndex - 1);
+        });
+    }
+    
+    // Установка обработчика события для кнопки "Следующий слайд"
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() {
+            clearAutoSlide();
+            showSlide(currentIndex + 1);
+        });
+    }
+    
+    // Установка обработчиков событий для точек-индикаторов
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', function() {
+            clearAutoSlide();
+            showSlide(index);
+        });
+    });
+    
+    // Функция отображения слайда по индексу
+    function showSlide(index) {
+        // Обработка граничных случаев для бесконечной прокрутки
+        if (index < 0) {
+            index = slides.length - 1;
+        } else if (index >= slides.length) {
+            index = 0;
+        }
+        
+        // Удаляем активный класс у текущего слайда и точки
+        slides[currentIndex].classList.remove('active');
+        if (dots && dots.length > 0) {
+            dots[currentIndex].classList.remove('active');
+        }
+        
+        // Добавляем активный класс новому слайду и точке
+        slides[index].classList.add('active');
+        if (dots && dots.length > 0) {
+            dots[index].classList.add('active');
+        }
+        
+        // Обновляем текущий индекс
+        currentIndex = index;
+    }
+    
+    // Функция для автоматической смены слайдов
+    function startAutoSlide() {
+        slideInterval = setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 5000); // Смена слайда каждые 5 секунд
+    }
+    
+    // Функция для остановки автоматической смены слайдов
+    function clearAutoSlide() {
+        if (slideInterval) {
+            clearInterval(slideInterval);
+        }
+    }
+    
+    // Запуск автоматической смены слайдов
+    startAutoSlide();
+    
+    // Остановка автоматической смены при наведении курсора
+    slider.addEventListener('mouseenter', clearAutoSlide);
+    
+    // Возобновление автоматической смены при уходе курсора
+    slider.addEventListener('mouseleave', startAutoSlide);
+    
+    // Инициализация первого слайда
+    showSlide(0);
+}
+</script>
+
+<!-- Структурированные данные Schema.org для каталога товаров -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+        "@type": "Product",
+        "name": "Сплит-система Hisense AS-07HR4SYDDC5",
+        "image": "https://сочисплит.рф/img/product1.jpg",
+        "description": "Инверторная сплит-система с функцией обогрева и охлаждения",
+        "sku": "AS-07HR4SYDDC5",
+        "brand": {
+          "@type": "Brand",
+          "name": "Hisense"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://сочисплит.рф/catalog/as-07hr4syddc5",
+          "priceCurrency": "RUB",
+          "price": "25990",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "item": {
+        "@type": "Product",
+        "name": "Сплит-система Daikin FTXB35C/RXB35C",
+        "image": "https://сочисплит.рф/img/product2.jpg",
+        "description": "Надежная сплит-система премиум-класса для дома и офиса",
+        "sku": "FTXB35C",
+        "brand": {
+          "@type": "Brand",
+          "name": "Daikin"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://сочисплит.рф/catalog/ftxb35c",
+          "priceCurrency": "RUB",
+          "price": "42500",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "item": {
+        "@type": "Product",
+        "name": "Сплит-система Mitsubishi Electric MSZ-LN25VGB/MUZ-LN25VG",
+        "image": "https://сочисплит.рф/img/product3.jpg",
+        "description": "Инверторная сплит-система премиум-класса с технологией очистки воздуха Plasma Quad",
+        "sku": "MSZ-LN25VGB",
+        "brand": {
+          "@type": "Brand",
+          "name": "Mitsubishi Electric"
+        },
+        "offers": {
+          "@type": "Offer",
+          "url": "https://сочисплит.рф/catalog/msz-ln25vgb",
+          "priceCurrency": "RUB",
+          "price": "78900",
+          "priceValidUntil": "2025-12-31",
+          "availability": "https://schema.org/InStock"
+        }
+      }
+    }
+  ]
+}
+</script>
+
+<!-- Структурированные данные Schema.org для организации -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Сочи сплит",
+  "url": "https://сочисплит.рф/",
+  "logo": "https://сочисплит.рф/img/logo.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+7 938 452 22 25",
+    "contactType": "customer service",
+    "areaServed": ["Сочи", "Абхазия"],
+    "availableLanguage": ["Russian"]
+  },
+  "sameAs": [
+    "https://vk.com/sochisplit",
+    "https://instagram.com/sochisplit"
+  ]
+}
+</script>
+
+<!-- Структурированные данные Schema.org для BreadcrumbList -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Главная",
+      "item": "https://сочисплит.рф/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Каталог кондиционеров",
+      "item": "https://сочисплит.рф/catalog.html"
+    }
+  ]
+}
+</script>
+</body>
+</html> 

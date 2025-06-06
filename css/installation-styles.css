@@ -1,0 +1,513 @@
+/* 
+* Сочи сплит - Стили для страницы монтажа
+* Дополнительные стили для оформления страницы монтажа кондиционеров
+*/
+
+/* Общие стили для секций */
+.installation-section {
+    padding: 4rem 0;
+}
+
+/* Важность профессионального монтажа */
+.installation-importance {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.importance-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+}
+
+.importance-image:hover {
+    transform: scale(1.02);
+}
+
+.importance-image img {
+    width: 100%;
+    height: auto;
+    transition: transform var(--transition-normal);
+}
+
+.importance-image img:hover {
+    transform: scale(1.05);
+}
+
+.importance-info h3 {
+    margin-bottom: 1.5rem;
+    font-size: var(--font-size-xl);
+    color: var(--dark);
+    position: relative;
+    padding-left: 1rem;
+    border-left: 4px solid var(--primary-color);
+}
+
+.importance-list {
+    margin-bottom: 2rem;
+}
+
+.importance-list li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    transition: transform var(--transition-fast);
+}
+
+.importance-list li:hover {
+    transform: translateX(5px);
+}
+
+.importance-list li i {
+    margin-right: 1rem;
+    font-size: var(--font-size-lg);
+}
+
+/* Этапы монтажа */
+.installation-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.step-card {
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.step-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition-normal);
+}
+
+.step-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.step-card:hover::before {
+    transform: scaleX(1);
+}
+
+.step-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: rgba(0, 153, 255, 0.1);
+}
+
+.step-icon {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    color: var(--primary-color);
+    transition: transform var(--transition-normal);
+}
+
+.step-card:hover .step-icon {
+    transform: scale(1.1);
+}
+
+.step-title {
+    margin-bottom: 1rem;
+    color: var(--dark);
+    font-size: var(--font-size-lg);
+}
+
+.step-description {
+    color: var(--gray);
+    line-height: 1.6;
+}
+
+/* Виды монтажа */
+.installation-types {
+    margin-bottom: 4rem;
+}
+
+.type-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    background-color: var(--white);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform var(--transition-normal);
+}
+
+.type-card:hover {
+    transform: translateY(-5px);
+}
+
+.type-image {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.type-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-normal);
+}
+
+.type-card:hover .type-image img {
+    transform: scale(1.05);
+}
+
+.type-content {
+    padding: 2rem;
+}
+
+.type-content h3 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: var(--font-size-xl);
+}
+
+.type-features {
+    margin: 1.5rem 0;
+}
+
+.type-features li {
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+}
+
+.type-features li i {
+    margin-right: 1rem;
+    font-size: var(--font-size-md);
+}
+
+.type-price {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.price {
+    font-size: var(--font-size-xl);
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+/* Технические особенности */
+.installation-features {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 3rem;
+    margin-bottom: 4rem;
+    align-items: center;
+}
+
+.features-image {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+.features-image img {
+    transition: transform var(--transition-normal);
+}
+
+.features-image:hover img {
+    transform: scale(1.05);
+}
+
+.features-content p {
+    margin-bottom: 2rem;
+    font-size: var(--font-size-lg);
+    color: var(--gray);
+}
+
+.features-list {
+    margin-top: 2rem;
+}
+
+.features-list li {
+    display: flex;
+    margin-bottom: 2rem;
+    transition: transform var(--transition-normal);
+}
+
+.features-list li:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    flex: 0 0 60px;
+    height: 60px;
+    background: var(--gradient-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+    color: var(--white);
+    font-size: var(--font-size-xl);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-normal);
+}
+
+.features-list li:hover .feature-icon {
+    transform: rotate(360deg);
+}
+
+.feature-text h4 {
+    margin-bottom: 0.5rem;
+    color: var(--dark);
+}
+
+.feature-text p {
+    margin-bottom: 0;
+    font-size: var(--font-size-md);
+}
+
+/* FAQ */
+.installation-faq {
+    margin-bottom: 4rem;
+}
+
+.faq-item {
+    margin-bottom: 1rem;
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-normal);
+}
+
+.faq-item:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.faq-question {
+    background-color: var(--white);
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color var(--transition-fast);
+}
+
+.faq-question:hover {
+    background-color: rgba(0, 153, 255, 0.05);
+}
+
+.faq-question h3 {
+    margin-bottom: 0;
+    font-size: var(--font-size-lg);
+    transition: color var(--transition-fast);
+}
+
+.faq-item.active .faq-question h3 {
+    color: var(--primary-color);
+}
+
+.faq-question i {
+    transition: transform var(--transition-normal), color var(--transition-fast);
+    color: var(--gray);
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+    color: var(--primary-color);
+}
+
+/* Упрощенный подход к анимации FAQ */
+.faq-answer {
+    background-color: var(--light-gray);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.faq-item.active .faq-answer {
+    max-height: 500px; /* Фиксированное значение, достаточно большое для любого ответа */
+}
+
+.faq-answer div {
+    padding: 1.5rem;
+}
+
+.faq-answer p {
+    margin-bottom: 0;
+    line-height: 1.8;
+    color: var(--dark);
+}
+
+/* Для темной темы */
+[data-theme="dark"] .faq-answer p {
+    color: var(--dark-light);
+}
+
+/* Форма для заказа монтажа */
+.installation-form-container {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.9), rgba(245, 245, 247, 0.9));
+    border-radius: var(--radius-lg);
+    padding: 2.5rem;
+    box-shadow: var(--shadow-md);
+    margin-bottom: 4rem;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.installation-form-container::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(0, 153, 255, 0.1), transparent, rgba(0, 229, 255, 0.1), transparent);
+    transform: rotate(45deg);
+    z-index: -1;
+    animation: formGlow 10s linear infinite;
+}
+
+@keyframes formGlow {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.installation-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.installation-form .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.installation-form select {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--light-gray);
+    border-radius: var(--radius-md);
+    font-size: var(--font-size-md);
+    color: var(--dark);
+    background-color: var(--white);
+    transition: border-color var(--transition-fast);
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1em;
+}
+
+.installation-form select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.installation-form button[type="submit"] {
+    width: 100%;
+    padding: 1rem;
+    font-size: var(--font-size-lg);
+    margin-top: 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.installation-form button[type="submit"]::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    animation: buttonGlow 2s infinite;
+}
+
+@keyframes buttonGlow {
+    0% {
+        left: -100%;
+    }
+    50%, 100% {
+        left: 100%;
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 992px) {
+    .installation-importance,
+    .installation-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .importance-image,
+    .features-image {
+        margin-bottom: 2rem;
+    }
+    
+    .installation-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+    
+    .type-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .type-image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .installation-steps {
+        grid-template-columns: 1fr;
+    }
+    
+    .step-card {
+        margin-bottom: 2rem;
+    }
+    
+    .faq-question h3 {
+        font-size: var(--font-size-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .installation-form-container {
+        padding: 1.5rem;
+    }
+    
+    .feature-icon {
+        flex: 0 0 40px;
+        height: 40px;
+        font-size: var(--font-size-md);
+    }
+} 
